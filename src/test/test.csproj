@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageReference Include="TinyFx.AspNet" Version="3.17.59" />
+    <PackageReference Include="TinyFx.AspNet.Hosting" Version="3.17.59" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lobby.Flow\Lobby.Flow.csproj" />
+    <ProjectReference Include="..\UGame.Banks.Client\UGame.Banks.Client.csproj" />
+    <ProjectReference Include="..\UGame.Banks.JOB\UGame.Banks.JOB.csproj" />
+  </ItemGroup>
+
+</Project>

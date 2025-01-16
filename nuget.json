@@ -1,0 +1,29 @@
+{
+  "NugetItems": [
+    {
+      "NugetKey": "9c922b9d-16f2-3ccf-9a3a-1f15cf72d0fb",
+      "NugetSource": "http://192.168.1.120:8081/repository/nuget-hosted/",
+      "Mode": 3
+    }
+  ],
+  "NugetIndex": 0,
+  "IsGitCommit": true,
+  "Projects": [
+    "src\\Lobby.Flow\\Lobby.Flow.csproj",
+    "src\\Xxyy.Banks.BLL\\Xxyy.Banks.BLL.csproj",
+    "src\\Xxyy.Banks.Client\\Xxyy.Banks.Client.csproj",
+    "src\\Xxyy.Banks.DAL\\Xxyy.Banks.DAL.csproj",
+    "src\\Xxyy.Banks.Hubtel\\Xxyy.Banks.Hubtel.csproj",
+    "src\\Xxyy.Banks.JOB\\Xxyy.Banks.JOB.csproj",
+    "src\\Xxyy.Banks.Letspay\\Xxyy.Banks.Letspay.csproj",
+    "src\\Xxyy.Banks.Tejeepay\\Xxyy.Banks.Tejeepay.csproj"
+  ],
+  "VsixItem": {
+    "ProjectPath": null,
+    "VsixPath": null,
+    "ConfigPath": null,
+    "Token": "3twuo3jaffjjlqjzbn66ijxcma2qffswyt7ajekwnnsg62jbewgq",
+    "PublisherExePath": null,
+    "MSBuildExePath": null
+  }
+}

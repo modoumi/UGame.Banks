@@ -1,0 +1,165 @@
+{
+    "AppOptions": {
+        "AppId": "banks",
+        "ServerUrl": "http://192.168.1.129:9008"
+    },
+    "Project": {
+        "ProjectId": "xxyy_banks",
+        "Description": "xxyy.banks-WebAPI"
+    },
+    "AppSettings":{
+      "VerifyOrderPageSize":5500
+    },
+ "AppConfigs": {
+    "inx": {
+      "PayCallbackUrl": "http://192.168.1.129:9008/api/bank/inx/callback/visa"
+    },
+    "hubtel": {
+      "Channels": "mtn-gh,vodafone-gh,tigo-gh"
+    },
+    "pandapay": {
+      "CompanyNo": "P011"
+    }
+  },
+  "Data":{
+    "ConnectionStrings":{
+      "default":{
+        "ConnectionString": "server=192.168.1.129;port=3306;database=ing-uat;user id=root;password=root;sslmode=Disabled;allowuservariables=True"
+      }
+    }
+  },
+    "RabbitMQ": {
+        "MessageAssemblies": [
+            "Xxyy.MQ.dll"
+        ],
+        "ConsumerAssemblies": [
+            "Xxyy.Banks.BLL.dll"
+        ]
+    },
+    "AutoMapper": {
+        "Assemblies": [
+             "Xxyy.Banks.BLL.dll",
+             "Xxyy.Banks.Mongopay.dll",
+             "Xxyy.Banks.Pandapay.dll"
+        ]
+    },
+    "HttpClient": {
+    "Clients": {
+      "dingtalk":{
+        "BaseAddress": "https://oapi.dingtalk.com/",
+        "Timeout": 5000,
+        "Settings": {
+          "secret": "SECa36ee2d61bb3b908c0b968de8c6b7329940e762e1d33b18b99866f21c74e6478",
+          "accessToken":"6a2c4ec3ded672f5c93a2fe9d45d4925e1de6571552f655f5045d4bcd95c5637"
+        }
+      },
+      "banks.inx": {
+        "BaseAddress": "https://xaldotest1.azurewebsites.net/",
+        "Timeout": 5000,
+        "Settings": {
+          "PayCallbackUrl": "http://192.168.1.129:9008/api/bank/inx/callback/visa"
+        }
+      },
+      "banks.mongopay": {
+        "BaseAddress": "https://openapi-mex-dev.mangocash.com/",
+        "Timeout": 30000,
+        "Settings": {
+          "MerchantCode": "S820230202014240000000",
+          "BankCode": "646",
+          "PayCallbackUrl": "http://123.125.255.133:8989/banks/api/bank/mongopay/callback/pay",
+          "CashCallbackUrl": "http://123.125.255.133:8989/banks/api/bank/mongopay/callback/cash"
+        }
+      },
+      "banks.hubtel": {
+        "Timeout": 30000,
+        "Settings": {
+          "Channels": "mtn-gh,vodafone-gh,tigo-gh",
+          "ApiID": "92rRk7B",
+          "ApiKey": "ce206133d88246848b123ea3873ad4d7",
+          "CashCallbackUrl": "http://123.125.255.133:8989/banks/api/bank/hubtel/callback/cash",
+          "PayCallbackUrl": "http://123.125.255.133:8989/banks/api/bank/hubtel/callback/pay",
+          "PayBaseAddress": "https://rmp.hubtel.com",
+          "VerifyCustomerBaseAddress": "https://rnv.hubtel.com",
+          "CashBaseAddress": "https://smp.hubtel.com"
+        }
+      },
+      "banks.pandapay": {
+        "BaseAddress": "https://brazilpay-api-test1.xiaoxinfen.com/",
+        "Timeout": 30000,
+        "Settings": {
+          "AppId": "yimiso123456",
+          "ApiKey": "yimiso123",
+          "CompanyNo": "P011"
+        }
+      },
+      "banks.tejeepay": {
+        "BaseAddress": "https://realpay.ltd",
+        "Timeout": 30000,
+        "Settings": {
+         "merchantId": "2000718000396374",
+          "merchantKey": "afd213c51d93497ba3350e186849101f",
+          "publicKey": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDG6bOpdJCyG/GUEA6iPFJ7XTwjR2jQ3WU9sv3/TNOU5MSwfMyolYYQQXPyt+3UihVUWOBPgUMnRvURRwSqiRET4ulnZk4kq0opVz5nc31h/9MqXWOQtn4SqsOu6BWImBfbWwkxvBWB8vNbTpfsDKEqJNxE3NuzkQdJGDSiGGyLdQIDAQAB",
+          "privateKey": "MIICdQIBADANBgkqhkiG9w0BAQEFAASCAl8wggJbAgEAAoGBAJDMqDfdCWYFKBTsH7t9B/i4KaEUIUvaanQylDgxpLQhnWCsTjyv6h2TOQW5yEERtyrCz9b/DdT1fgI3wyAQE566kmq/aApbOpKTbSd7rAZYhoJ+C9lhn1ZWWrHsmjxc2KpJvWagwBGZ9ipAFaoq+X6vMutZQlm95cFqZfVDyIAZAgMBAAECgYAkiP8I2WS9sR9j6BA5plqUjyMx2XptQTcLCpgLdbsxGCo1ckRrW5eezr7civvULzwgNfdrL/+1dBvPQ3KgbG4GhYr7tvn03dUKsAsRnrbz1LPy9WZiz7jgKqTYSXSnjzym8xsxCtZL8vQauAtbw51fwCo/M/SeuoHtSXVP8I1zYQJBAMvtDEE3wWnN8YskYFvqU5VI49bfEjIE99KFO0CZfbLcCMOwLrWlGhThnD9vPWzzZONyV9pQGZxPujs27LOu3jMCQQC1xmr4tpqQa2Hp2gd/u3dhpkdw6EkC1fF4u8fxx0Mf0+l8HEOXRLk0FLbu2GbQNlm9ueXidpsNI/boTPvW3ASDAkAJSPnN3mQIFUByPW3FwZ2cpnz5Q57oeCFwjHBuOI7onewoPNVjn+jYGo2qtb3uQAbP9Fzbq9n+rAKmv5F3fPbRAkBZKp/GqSxgs4wwPnd3POpuyDY7OHa4IWJ2KwcFnw1aS4U5EFRHm7qNxauGtjiY4lBbNRmDYVLlu0Ke6USQPRUpAkB7Th2obpTOJ4NzmGBzp9gwJNRjYR9LYUcPIJwDIXI/WlpNhYc0CxdS5JBA8nwgoYUQ7NkuO4Fclw0yVK9ehEfz",
+          "host": "http://123.125.255.133:8989/banks/",
+          "payNotify": "api/bank/tejeepay/callback/PayNotify",
+          "payCallback": "api/bank/tejeepay/callback/PayCallback",
+          "cashNotify": "api/bank/tejeepay/callback/CashNotify"
+        }
+      },
+      "banks.orionpay": {
+        "BaseAddress": "https://oauth2.onixsolucoes.com",
+        "Timeout": 30000,
+        "Settings": {
+          "API_BASE_URL": "https://api.onixsolucoes.com/api/v1",
+          "AUTH_BASE_URL": "https://oauth2.onixsolucoes.com",
+          "callback": "http://123.125.255.133:8989/banks/api/bank/orionpay/callback/payNotify",
+          "account_id": "364619a3-d628-4e2f-bb05-bb24f84c4400",
+          "client_id": "4fdca59b-cbcd-496a-a405-e418ba48eff6",
+          "client_secret": "imEn5aALiCo6bGSjfkwonjXQ1XuKwfat",
+          "username": "bennyxbyxby@gmail.com",
+          "password": "181cc2bb-cf07-4b40-b66e-b6529c4bb7bb",
+          "marketplace_id": "4fdca59b-cbcd-496a-a405-e418ba48eff6"
+        }
+      },
+      "banks.letspay": {
+          "BaseAddress": "http://api.fatpag.org",
+        "Timeout": 30000,
+        "Settings": {
+          "host": "http://api.fatpag.org",
+          "queryHost":"http://check.fatpag.org",
+          "payNotify": "http://123.125.255.133:8989/banks/api/bank/letspay/callback/payNotify",
+          "cashNotify": "http://123.125.255.133:8989/banks/api/bank/letspay/callback/cashNotify",
+           "mchId": "1688380982982",
+          "key": "0I5YGVBYFWZLZ4ZWTC0AUJDUVGA1EGRL4R0BECFHDNJVPA6HVZYEKSSGN65I2EQQ72ATSOYNGKBDN36JBKBMDA4C5YZXYIPZ4N2UXC47DKWBIEMOPSSMEHLQQVSDDHH4"
+        }
+      }
+    }
+  },
+    "AspNet": {
+        "PathBase": "/banks"
+    },
+    "ApiAccessFilter": {
+    "DefaultFilterName": "default",
+    "Filters": {
+      "callback.pandapay": {
+        "Enabled": false,
+        "EnableIntranet": false,
+        "AllowIps": "192.168.2.11"
+      },
+      "callback.tejeepay": {
+        "Enabled": true,
+        "AllowIps": "18.229.200.90;18.229.94.174"
+      },
+      "callback.orionpay": {
+        "Enabled": false,
+        "EnableIntranet": true,
+        "AllowIps": "35.184.239.243;"
+      },
+      "callback.letspay": {
+        "Enabled": true,
+        "EnableIntranet": true,
+        "AllowIps": "52.67.100.247;15.228.167.245;54.207.16.136"
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <Version>1.2.60</Version>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>embedded</DebugType>
+    <EmbedAllSources>true</EmbedAllSources>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="TinyFx.AspNet" Version="3.17.59" />
+    <PackageReference Include="TinyFx.Data.SqlSugar" Version="3.17.59" />
+    <PackageReference Include="TinyFx.DbCaching" Version="3.17.59" />
+  </ItemGroup>
+</Project>

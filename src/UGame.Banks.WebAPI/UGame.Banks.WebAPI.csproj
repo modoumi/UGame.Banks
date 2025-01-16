@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+	<AnalysisLevel>6.0-recommended</AnalysisLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.20.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\UGame.Banks.BFpay\UGame.Banks.BFpay.csproj" />
+    <ProjectReference Include="..\UGame.Banks.Hubtel\UGame.Banks.Hubtel.csproj" />
+    <ProjectReference Include="..\UGame.Banks.Letspay\UGame.Banks.Letspay.csproj" />
+    <ProjectReference Include="..\UGame.Banks.Service\UGame.Banks.Service.csproj" />
+    <!--<ProjectReference Include="..\Xxyy.Banks.Hubtel\Xxyy.Banks.Hubtel.csproj" />
+    <ProjectReference Include="..\Xxyy.Banks.Inx\Xxyy.Banks.Inx.csproj" />
+    <ProjectReference Include="..\Xxyy.Banks.Mongopay\Xxyy.Banks.Mongopay.csproj" />
+    <ProjectReference Include="..\Xxyy.Banks.OrionPay\Xxyy.Banks.Orionpay.csproj" />
+    <ProjectReference Include="..\Xxyy.Banks.Pandapay\Xxyy.Banks.Pandapay.csproj" />-->
+    <ProjectReference Include="..\UGame.Banks.Tejeepay\UGame.Banks.Tejeepay.csproj" />
+	<ProjectReference Include="..\UGame.Banks.Mlpay\UGame.Banks.Mlpay.csproj" />
+  </ItemGroup>
+	<ItemGroup>
+		<Using Include="TinyFx" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="Dockerfile">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+</Project>

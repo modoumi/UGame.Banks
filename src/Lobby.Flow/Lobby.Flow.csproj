@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <Version>1.0.122</Version>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>embedded</DebugType>
+    <EmbedAllSources>true</EmbedAllSources>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="nupkgs\**" />
+    <EmbeddedResource Remove="nupkgs\**" />
+    <None Remove="nupkgs\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xxyy.Common" Version="1.4.172" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UGame.Banks.Client\UGame.Banks.Client.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAL\tinyfx\sa\" />
+  </ItemGroup>
+</Project>

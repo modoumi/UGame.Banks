@@ -1,0 +1,30 @@
+接口文档地址：https://www.showdoc.com.cn/1933660256224675/8800468008702027
+密码：123456
+
+
+正式账号
+partnerId：1000100020003170
+applicationId：164
+payWay：2
+密钥：1096786C253347FF8DD8730E3895D688
+代付Key： E5FDF0A271184838A7ED55CA68CFBA26
+
+需要提供代付白名单IP：
+登陆地址：https://admin.lovetigervip.com/ 
+账号：YIMISOL
+密码：123456
+https://api.lovetigervip.com/ 接口地址
+
+
+测试账号信息
+商户名称：YIMISOLCS
+商户id：1000100020003188
+applicationId：182
+payWay：2
+密钥：9FA83D53F1A14EF68D76E9D4966CAA62
+代付key:
+需要提供代付白名单IP：
+登陆地址：https://admin.lovetigervip.com/ 
+账号：YIMISOL
+密码：123456
+https://api.lovetigervip.com/ 接口地址

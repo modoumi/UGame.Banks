@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Version>1.2.44</Version>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>embedded</DebugType>
+    <EmbedAllSources>true</EmbedAllSources>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UGame.Banks.Service\UGame.Banks.Service.csproj" />
+    <ProjectReference Include="..\UGame.Banks.Hubtel\UGame.Banks.Hubtel.csproj" />
+    <ProjectReference Include="..\UGame.Banks.Letspay\UGame.Banks.Letspay.csproj" />
+    <ProjectReference Include="..\UGame.Banks.Tejeepay\UGame.Banks.Tejeepay.csproj" />
+  </ItemGroup>
+</Project>

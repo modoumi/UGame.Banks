@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <Version>1.2.44</Version>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>embedded</DebugType>
+    <EmbedAllSources>true</EmbedAllSources>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UGame.Banks.Repository\UGame.Banks.Repository.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\Cash\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xxyy.Common" Version="1.4.172" />
+  </ItemGroup>
+</Project>
